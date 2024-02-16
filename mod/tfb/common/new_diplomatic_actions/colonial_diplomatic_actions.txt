@@ -1,0 +1,65 @@
+# Triggers and effects will be given the Actor's scope, with the Recipient's as FROM
+
+limit_colonial_expansion_on =  {
+	category = influence
+	require_acceptance = no
+	is_visible = {
+		overlord_of = FROM
+		FROM = {
+			NOT = { has_country_flag = colony_restricted_expansion }
+			is_colonial_nation = yes
+		}
+	}
+	is_allowed = {
+		FROM = {
+			custom_trigger_tooltip = {
+				tooltip = disallow_expansion_tooltip
+				NOT = { has_country_flag = colony_restricted_expansion }
+				NOT = { has_country_modifier = restricting_colonial_expansion }
+			}
+		}
+	}
+	on_accept = {
+		FROM = {
+			set_country_flag = colony_restricted_expansion
+			add_country_modifier = {
+				name = restricting_colonial_expansion
+				duration = -1  
+				desc = restricting_colonial_expansion_modifier_desc
+				hidden = yes
+			}
+		}
+	}
+	ai_will_do = {
+		always = no
+	}
+}
+
+limit_colonial_expansion_off =  {
+	category = influence
+	require_acceptance = no
+	is_visible = {
+		overlord_of = FROM
+		FROM = {
+			is_colonial_nation = yes
+			has_country_flag = colony_restricted_expansion
+		}
+	}
+	is_allowed = {
+		FROM = {
+			custom_trigger_tooltip = {
+				tooltip = allow_expansion_tooltip
+				has_country_flag = colony_restricted_expansion
+			}
+		}
+	}
+	on_accept = {
+		FROM = {
+			remove_country_modifier = restricting_colonial_expansion
+			clr_country_flag = colony_restricted_expansion
+		}
+	}
+	ai_will_do = {
+		always = no
+	}
+}

@@ -1,0 +1,12 @@
+﻿l_english:
+ colorlessness_ColonyRegionRestriction:0 "§RColonial nations cannot colonize outside their respective colonial region.§"
+ colorlessness_SubjectColonyRestriction:0 "Subject nations cannot colonize overseas provinces."
+ limit_colonial_expansion_on_title:0 "Restrict Colonial Expansion"
+ limit_colonial_expansion_on_desc:0 "Do you wish to restrict your colonial nation's ability to colonize? They won't be able to colonize provinces until you allow them to again."
+ limit_colonial_expansion_off_title:0 "Allow Colonial Expansion"
+ limit_colonial_expansion_on_tooltip:0 "Prohibit your colonial nation from colonizing further."
+ limit_colonial_expansion_off_tooltip:0 "Allow your colonial nation to colonize again."
+ restricting_colonial_expansion_modifier_desc:0 "Our colonial overlord has prevented us from colonizing further."
+ disallow_expansion_tooltip:0 "Colonial expansion is not already disabled"
+ allow_expansion_tooltip:0 "Colonial expansion is not already enabled"
+ limit_colonial_expansion_off_desc:0 "Do you wish to allow your colonial nation to colonize again? They will be able to colonize provinces until you prohibit them from doing so again."

@@ -1,0 +1,5 @@
+
+restricting_colonial_expansion = {
+	colonists = -10
+}
+
