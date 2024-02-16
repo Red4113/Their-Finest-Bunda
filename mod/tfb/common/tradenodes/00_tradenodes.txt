@@ -1839,9 +1839,6 @@ baltic_sea={
 		27 28 29 31 4123 #finland_area
 		19 4113 4152 #bothnia_area
 		315 1777 4151 #laponia_area
-		10 20 21 #northern_norway
-		17 22 4143 4144 #eastern_norway
-		23 24 2752 4145 #western_norway
 		9 11 18 4114 #norrland_area
 		1 4 1930 #ostra_svealand_area
 		5 8 1985  #svealand_area
@@ -2045,6 +2042,9 @@ north_sea={
 		375 376 4119 #connacht_area
 		4118 4377 4378 #munster_area
 		1978 1979 370 371 #subarctic_islands_area
+		10 20 21 #northern_norway
+		17 22 4143 4144 #eastern_norway
+		23 24 2752 4145 #western_norway
 	}
 }
 lubeck={
