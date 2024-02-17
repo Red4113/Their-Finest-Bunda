@@ -831,7 +831,7 @@ nor_conquest_mission_slot = {
 					add_base_production = 3
 					add_base_manpower = 2
 				}
-				1929 = {
+				1975 = {
 					add_trade_modifier = {
 						who = ROOT
 						duration = -1
