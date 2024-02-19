@@ -1,11 +1,19 @@
+# Kalmar Union
+#union = {
+#	first = DAN
+#	second = SWE
+#	#start_date = 1397.6.17
+#	start_date = 1444.1.1
+#	end_date = 1448.6.20
+#}
 
 # Kalmar Union
-union = {
-	first = DAN
-	second = SWE
-	start_date = 1457.2.24
-	end_date = 1464.9.2
-}
+#union = {
+#	first = DAN
+#	second = SWE
+#	start_date = 1457.2.24
+#	end_date = 1464.9.2
+#}
 
 # Kalmar Union
 union = {
@@ -22,6 +30,15 @@ union = {
 	start_date = 1503.12.14
 	end_date = 1521.6.6
 }
+
+# Denmark-Norway
+#union = {
+#	first = DAN
+#	second = NOR
+#	#start_date = 1397.6.17
+#	start_date = 1444.1.1
+#	end_date = 1449.11.20
+#}
 
 # Sweden-Norway
 union = {

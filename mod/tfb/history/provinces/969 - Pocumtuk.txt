@@ -1,8 +1,8 @@
 #969 - Pocumtuk
 
-add_core = MAH
-owner = MAH
-controller = MAH
+#add_core = MAH
+#owner = MAH
+#controller = MAH
 culture = mahican
 religion = totemism
 capital = "Pocumtuk"

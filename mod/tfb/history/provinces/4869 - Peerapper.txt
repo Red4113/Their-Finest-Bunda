@@ -1,8 +1,8 @@
 #4869 - Peerapper
 
-add_core = PLW
-owner = PLW
-controller = PLW
+#add_core = PLW
+#owner = PLW
+#controller = PLW
 culture = palawa
 religion = dreamtime
 capital = "Peerapper"

@@ -91,14 +91,14 @@ capital = 121 # Napoli
 
 # Personal Union with Aragon 42-58
 
-1444.6.27 = {
+1458.6.27 = {
 	monarch = {
 		name = "Ferdinand I"
 		dynasty = "de Trastámara"
 		birth_date = 1424.6.2
 		dip = 4
 		mil = 4
-		adm = 4
+		adm = 2
 	}		
 }
 

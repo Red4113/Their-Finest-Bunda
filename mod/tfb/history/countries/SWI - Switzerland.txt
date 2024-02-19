@@ -1,19 +1,22 @@
 government = republic
 add_government_reform = united_cantons_reform
-government_rank = 1
+government_rank = 2
 technology_group = western
 religion = catholic
 primary_culture = swiss
 capital = 165 # Bern
+elector = yes
 add_army_professionalism = 0.1
-elector=yes
-1399.1.1 = {
+
+1422.1.1 = {
 	monarch = {
-		name = "Die Tagsatzung"
+		name = "Thomas Eugster"
 		adm = 3
 		dip = 3
 		mil = 3
-		regent = yes
+
+		birth_date = 1420.1.1
+		
 	}
 }
 

@@ -1,8 +1,8 @@
 # No previous file for Hasinai
 
-owner = HNI
-controller = HNI
-add_core = HNI
+#owner = HNI
+#controller = HNI
+#add_core = HNI
 is_city = yes
 culture = caddo
 religion = totemism

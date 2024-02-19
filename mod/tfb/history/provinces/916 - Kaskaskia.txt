@@ -1,8 +1,8 @@
 #916 - Kaskaskia
 
-owner = KSK
-controller = KSK
-add_core = KSK
+#owner = KSK
+#controller = KSK
+#add_core = KSK
 is_city = yes
 culture = illini
 religion = totemism

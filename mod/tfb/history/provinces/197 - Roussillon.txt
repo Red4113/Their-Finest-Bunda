@@ -16,7 +16,7 @@ add_core = ARA
 add_core = TOU
 fort_15th = yes
 
-
+set_local_autonomy = 0
 
 discovered_by = eastern
 discovered_by = western

@@ -1,8 +1,8 @@
 #886 - Waco
 
-owner = WIC
-controller = WIC
-add_core = WIC
+#owner = WIC
+#controller = WIC
+#add_core = WIC
 culture = wichita
 religion = totemism
 capital = "Waco"

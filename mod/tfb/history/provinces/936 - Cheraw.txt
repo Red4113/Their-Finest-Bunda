@@ -1,7 +1,7 @@
 #936 - Cheraw
 
-owner = JOA
-controller = JOA
+#owner = JOA
+#controller = JOA
 culture = catawba
 religion = totemism
 capital = "Cheraw"
@@ -14,7 +14,7 @@ native_size = 10
 native_ferocity = 7
 native_hostileness = 2
 is_city = yes
-add_core = JOA
+#add_core = JOA
 
 
 

@@ -1,8 +1,8 @@
 #937 - Tuscarora
 
-owner = TSC
-controller = TSC
-add_core = TSC
+#owner = TSC
+#controller = TSC
+#add_core = TSC
 is_city = yes
 culture = iroquois
 religion = totemism

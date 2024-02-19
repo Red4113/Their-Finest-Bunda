@@ -1,8 +1,8 @@
 #943 - Miami
 
-add_core = MMI
-owner = MMI
-controller = MMI
+#add_core = MMI
+#owner = MMI
+#controller = MMI
 culture = miami
 religion = totemism
 capital = "Miami"

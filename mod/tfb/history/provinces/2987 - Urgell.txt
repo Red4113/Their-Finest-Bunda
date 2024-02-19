@@ -14,7 +14,7 @@ base_manpower = 2
 capital = "Tàrrega" 
 is_city = yes 
 
-
+set_local_autonomy = 0
 
 discovered_by = western
 discovered_by = eastern

@@ -1,8 +1,8 @@
 # No previous file for Sokoki
 
-owner = ABE
-controller = ABE
-add_core = ABE
+#owner = ABE
+#controller = ABE
+#add_core = ABE
 is_city = yes
 culture = abenaki
 religion = totemism

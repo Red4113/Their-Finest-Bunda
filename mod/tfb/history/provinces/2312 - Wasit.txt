@@ -1,7 +1,7 @@
 #2312 - Wasit
 
-owner = QAR
-controller = QAR
+owner = IRQ
+controller = IRQ
 culture = al_iraqiya_arabic
 religion = sunni
 capital = "Wasit"
@@ -12,7 +12,7 @@ base_production = 3
 base_manpower = 2
 is_city = yes
 add_core = BSR
-add_core = QAR
+add_core = IRQ
 add_core = MSY
 discovered_by = east_african
 discovered_by = muslim
@@ -20,7 +20,8 @@ discovered_by = ottoman
 discovered_by = eastern
 discovered_by = indian
 discovered_by = nomad_group
-add_local_autonomy = 20
+add_claim = QAR
+
 
 1447.1.1 = {
 	owner = MSY

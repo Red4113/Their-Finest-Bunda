@@ -1,8 +1,8 @@
 #993 - Hochelega
 
-owner = OSH
-controller = OSH
-add_core = OSH
+#owner = OSH
+#controller = OSH
+#add_core = OSH
 is_city = yes
 culture = laurentian
 religion = totemism

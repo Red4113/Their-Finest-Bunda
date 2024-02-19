@@ -1,8 +1,8 @@
 #784 - Huillimapu
 
-owner = MPC
-controller = MPC
-add_core = MPC
+#owner = MPC
+#controller = MPC
+#add_core = MPC
 culture = mapuche
 discovered_by = south_american
 religion = animism

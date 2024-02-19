@@ -1,8 +1,8 @@
 # No previous file for Wenrohonon
 
-owner = WEN
-controller = WEN
-add_core = WEN
+#owner = WEN
+#controller = WEN
+#add_core = WEN
 is_city = yes
 culture = tionontate
 religion = totemism

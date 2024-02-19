@@ -14,7 +14,7 @@ base_manpower = 3
 capital = "Girona" 
 is_city = yes		# census of 1462, also includes the town of Figueres 
 
-
+set_local_autonomy = 0
 
 discovered_by = western
 discovered_by = eastern

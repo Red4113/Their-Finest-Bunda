@@ -3,7 +3,7 @@
 #add_core = PLW
 #owner = PLW
 #controller = PLW
-tribal_owner = PLW
+#tribal_owner = PLW
 culture = palawa
 religion = dreamtime
 capital = "Pyemmairrener"

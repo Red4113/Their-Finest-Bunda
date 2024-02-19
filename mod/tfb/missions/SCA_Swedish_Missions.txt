@@ -837,7 +837,7 @@ swe_diplomacy_mission_slot = {
 				}
 			}
 			else = {
-				add_dip_power = 100
+				add_dip_power = 25
 			}
 		}
 	}
@@ -976,10 +976,6 @@ swe_diplomacy_mission_slot = {
 					}
 				}
 				add_dip_power = 100
-				add_country_modifier = {
-					name = "swe_germanic_alliance"
-					duration = 9125
-				}
 				mecklenburg_area = {
 					limit = {
 						is_permanent_claim = ROOT
@@ -1201,7 +1197,7 @@ swe_diplomacy_mission_slot = {
 		provinces_to_highlight = {
 			OR = {
 				AND = {
-					province_id = 1929
+					province_id = 1975
 					OR = {
 						NOT = { is_strongest_trade_power = ROOT }
 						NOT = {
@@ -1242,7 +1238,7 @@ swe_diplomacy_mission_slot = {
 					share = 50
 				}
 			}
-			1929 = {
+			1975 = {
 				OR = {
 					is_strongest_trade_power = ROOT
 					trade_share = {
@@ -2120,8 +2116,8 @@ swe_internal_slot = {
 						is_subject = no
 					}
 				}
-				add_adm_power = 100
-				add_mil_power = 100
+				add_adm_power = 25
+				add_mil_power = 50
 			}
 			else = {
 				country_event = {
@@ -2589,9 +2585,9 @@ swe_swedish_military_mission_slot = {
 				limit = {
 					is_free_or_tributary_trigger = yes
 				}
-				add_adm_power = 50
-				add_dip_power = 50
-				add_mil_power = 50
+				add_adm_power = 20
+				add_dip_power = 20
+				add_mil_power = 20
 			}
 			else = {
 				if = {

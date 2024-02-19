@@ -1,8 +1,8 @@
 #956 - Lenape
 
-owner = LEN
-controller = LEN
-add_core = LEN
+#owner = LEN
+#controller = LEN
+#add_core = LEN
 is_city = yes
 culture = delaware
 religion = totemism

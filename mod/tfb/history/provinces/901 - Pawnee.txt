@@ -1,8 +1,8 @@
 #901 - Pawnee
 
-add_core = PAW
-owner = PAW
-controller = PAW
+#add_core = PAW
+#owner = PAW
+#controller = PAW
 culture = pawnee
 religion = totemism
 capital = "Pawnee"

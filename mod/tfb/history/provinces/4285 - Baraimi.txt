@@ -3,7 +3,7 @@
 owner = OMA
 controller = OMA
 culture = omani_culture
-religion = ibadi
+religion = shiite
 capital = "Ibri"
 trade_goods = livestock
 hre = no

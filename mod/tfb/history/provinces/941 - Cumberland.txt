@@ -1,8 +1,8 @@
 #941 - Cumberland
 
-owner = CCA
-controller = CCA
-add_core = CCA
+#owner = CCA
+#controller = CCA
+#add_core = CCA
 is_city = yes
 culture = yuchi
 religion = totemism

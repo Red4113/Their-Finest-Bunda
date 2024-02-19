@@ -1,7 +1,7 @@
 #988 - Huron
 
-owner = ATT
-controller = ATT
+#owner = ATT
+#controller = ATT
 culture = huron
 religion = totemism
 capital = "Attignawantan"
@@ -11,7 +11,7 @@ base_tax = 2
 base_production = 2
 base_manpower = 4
 is_city = yes
-add_core = ATT
+#add_core = ATT
 native_size = 10
 native_ferocity = 5
 native_hostileness = 2

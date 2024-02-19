@@ -1,8 +1,8 @@
 # No previous file for Wabash
 
-owner = OSA
-controller = OSA
-add_core = OSA
+#owner = OSA
+#controller = OSA
+#add_core = OSA
 is_city = yes
 culture = osage
 religion = totemism

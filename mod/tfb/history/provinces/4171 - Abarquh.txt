@@ -3,7 +3,7 @@
 owner = TIM
 controller = TIM
 culture = persian
-religion = sunni
+religion = shiite
 capital = "Abarquh"
 trade_goods = livestock #known for its pastures for Timurid armies
 hre = no
@@ -12,7 +12,7 @@ base_production = 1
 base_manpower = 1
 is_city = yes
 add_core = ISF
-add_core = TIM
+#add_core = TIM
 discovered_by = muslim
 discovered_by = ottoman
 discovered_by = indian
@@ -45,9 +45,6 @@ discovered_by = nomad_group
 	add_core = PER
 	remove_core = AKK
 } # The Safavids took over
-1532.1.1 = {
-	religion = shiite
-} # Estimated time when the Safavids convert the Sunni to Shia
 1550.1.1 = { discovered_by = TUR }
 1673.1.1 = { discovered_by = ENG }
 1677.1.1 = { discovered_by = FRA }

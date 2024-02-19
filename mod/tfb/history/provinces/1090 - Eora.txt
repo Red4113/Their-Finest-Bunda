@@ -1,8 +1,8 @@
 #1090 - Eora
 
-add_core = EOR
-owner = EOR
-controller = EOR
+#add_core = EOR
+#owner = EOR
+#controller = EOR
 culture = aboriginal
 religion = dreamtime
 capital = "Eora"

@@ -1,8 +1,8 @@
 # No previous file for Yamasee
 
-owner = ALT
-controller = ALT
-add_core = ALT
+#owner = ALT
+#controller = ALT
+#add_core = ALT
 is_city = yes
 culture = yamasee
 religion = totemism

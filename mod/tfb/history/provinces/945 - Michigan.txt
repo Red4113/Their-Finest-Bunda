@@ -1,8 +1,8 @@
 #945 - Michigan
 
-add_core = POT
-owner = POT
-controller = POT
+#add_core = POT
+#owner = POT
+#controller = POT
 culture = anishinabe
 religion = totemism
 capital = "Michigan"
