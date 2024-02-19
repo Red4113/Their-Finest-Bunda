@@ -1197,7 +1197,7 @@ swe_diplomacy_mission_slot = {
 		provinces_to_highlight = {
 			OR = {
 				AND = {
-					province_id = 1975
+					province_id = 1929
 					OR = {
 						NOT = { is_strongest_trade_power = ROOT }
 						NOT = {
@@ -1238,7 +1238,7 @@ swe_diplomacy_mission_slot = {
 					share = 50
 				}
 			}
-			1975 = {
+			1929 = {
 				OR = {
 					is_strongest_trade_power = ROOT
 					trade_share = {
