@@ -387,6 +387,7 @@ DAN_ideas = {
 	dan_naval_heroes = {
 		leader_naval_shock = 1
 		naval_morale = 0.15
+		heavy_ship_power = 0.1
 	}
 	dan_colonial_ventures = {
 		global_colonial_growth = 15
