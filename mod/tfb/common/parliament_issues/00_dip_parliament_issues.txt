@@ -48,7 +48,7 @@ charter_colonies = {
 	
 	modifier = {
 		colonists = 1
-		global_colonial_growth = 10
+		global_colonial_growth = 20
 	}
 	influence_scaled_modifier = {
 		colony_cost_modifier = -0.25
