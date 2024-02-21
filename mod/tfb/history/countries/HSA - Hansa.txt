@@ -1,6 +1,6 @@
 government = republic
-add_government_reform = merchants_reform
-government_rank = 2
+add_government_reform = hansa_free_city_reform
+government_rank = 1
 mercantilism = 25
 technology_group = western
 religion = catholic
@@ -10,14 +10,13 @@ historical_friend = HAM #Hamburg
 historical_friend = BRE #Bremen
 historical_friend = RIG #Riga
 
-1444.1.1 = {
+1444.11.11 = {
 	monarch = {
-		name = "Valentin Steetz"
+		name = "Stadtrat"
 		adm = 3
-		dip = 2
-		mil = 4
-
-		birth_date = 1420.1.1
+		dip = 3
+		mil = 3
+		regent = yes
 	}
 }
 

@@ -46,13 +46,13 @@ add_army_professionalism = 0.1
 }
 
 
-1430.1.1 = {
+1404.1.1 = {
 	heir = {
 		name = "Philippe"
 		monarch_name = "Philippe III"
 		dynasty = "de Bourgogne"
-		birth_date = 1414.7.31
-		#death_date = 1467.6.15
+		birth_date = 1396.7.31
+		death_date = 1467.6.15
 		claim = 95
 		dip = 5
 		adm = 5
@@ -63,15 +63,15 @@ add_army_professionalism = 0.1
 
 1408.1.1 = { leader = {	name = "Jean de Pressy"   	type = general	fire = 3	shock = 3	manuever = 3	siege = 0	death_date = 1437.1.1 } }
 
-1444.9.11 = {
+1419.9.11 = {
 	monarch = {
 		name = "Philippe III"
 		dynasty = "de Bourgogne"
-		birth_date = 1414.7.31
+		birth_date = 1396.7.31
 		adm = 5
 		dip = 5
 		mil = 5
-		#leader = { name = "Philippe III"   	type = general	fire = 3	shock = 3	manuever = 3	siege = 1 }
+		leader = { name = "Philippe III"   	type = general	fire = 3	shock = 3	manuever = 3	siege = 1 }
 	}
 	clear_scripted_personalities = yes
 	add_ruler_personality = calm_personality
@@ -102,9 +102,9 @@ add_army_professionalism = 0.1
 		birth_date = 1433.11.10
 		death_date = 1477.1.5
 		claim = 95
-		adm = 4
-		dip = 4
-		mil = 5
+		adm = 2
+		dip = 0
+		mil = 4
 		block_disinherit = yes
 	}
 	set_heir_flag = is_charles_of_burg_flag
@@ -174,6 +174,14 @@ add_army_professionalism = 0.1
 	add_ruler_personality = benevolent_personality
 }
 
+1477.8.19 = {
+	override_country_name = BURGUNDIAN_NETHERLANDS
+	change_country_color = { 
+		color = { 220 210 200 }
+		#color = { 184 176 165 }
+	}
+}
+
 # Burgundy is owned by the Habsburgs at this point, represented as HAB ownership
 
 1478.7.22 = {
@@ -200,6 +208,9 @@ add_army_professionalism = 0.1
 		mil = 0
 	}
 }
+
+#Queen
+#Joanna of Castille
 
 1500.2.24 = {
 	heir = {
@@ -229,6 +240,50 @@ add_government_reform = autocracy_reform }
 	}
 }
 
+1519.1.12 = {
+	change_country_color = {
+		color = { 240 180 66 }
+	}
+}
+
+1527.5.21 = {
+	heir = {
+		name = "Felipe"
+		monarch_name = "Felipe II"
+		dynasty = "von Habsburg"
+		birth_date = 1527.5.21
+		death_date = 1598.9.13
+		claim = 95
+		adm = 4
+		dip = 3
+		mil = 4
+	}
+}
+1556.1.16 = {
+	monarch = {
+		name = "Felipe II"
+		dynasty = "von Habsburg"
+		adm = 4
+		dip = 3
+		mil = 4
+	}
+	queen = {
+		country_of_origin = ENG
+		name = "Mary"
+		dynasty = "Tudor"
+		birth_date = 1516.2.18
+		death_date = 1558.12.17
+		female = yes
+		adm = 1
+		dip = 1
+		mil = 0
+	}
+}
+
+1577.2.12 = { 
+	restore_country_name = yes 
+	restore_country_color = yes 
+}
 
 1589.8.3 = { set_legacy_government = administrative_monarchy }
 

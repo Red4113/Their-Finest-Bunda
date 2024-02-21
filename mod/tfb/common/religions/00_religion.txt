@@ -17,13 +17,12 @@ christian = {
 	
 	
 	catholic = {
-		allow_female_defenders_of_the_faith = yes
-		declare_war_in_regency = yes
 		color = { 204 204 0 }
 		icon = 1
 		allowed_conversion = {
 			reformed
 			protestant
+			#anabaptist
 		}
 		country = {
 			tolerance_own = 1
@@ -316,8 +315,6 @@ christian = {
 	}
 
 	anglican = {
-		allow_female_defenders_of_the_faith = yes
-		declare_war_in_regency = yes
 		color = { 135 77 255 }
 		icon = 28
 		allow_female_defenders_of_the_faith = yes
@@ -356,8 +353,6 @@ christian = {
 	}
 	
 	hussite = {
-		allow_female_defenders_of_the_faith = yes
-		declare_war_in_regency = yes
 		color = { 244 55 9 }
 		icon = 22
 
@@ -393,8 +388,6 @@ christian = {
 	}
 	
 	protestant = {
-		allow_female_defenders_of_the_faith = yes
-		declare_war_in_regency = yes
 		color = { 0 0 178 }
 		icon = 2
 
@@ -537,8 +530,6 @@ christian = {
 	}
 
 	reformed = {
-		allow_female_defenders_of_the_faith = yes
-		declare_war_in_regency = yes
 		color = { 76 76 229 }
 		icon = 3
 		allowed_conversion = {
@@ -658,8 +649,6 @@ christian = {
 	}
 
 	orthodox = {
-		allow_female_defenders_of_the_faith = yes
-		declare_war_in_regency = yes
 		color = { 178 127 0 }
 		icon = 4
 		country = {
@@ -684,8 +673,8 @@ christian = {
 			# If no icon has ai_will_do above 1 - <current patriarch authority> , the AI will not enact it. (60% PA = 0.6 -> ai_will_do has to be at least 0.4)
 
 			icon_michael = {
-				land_morale = 0.05
-				manpower_recovery_speed = 0.05
+				discipline = 0.05
+				manpower_recovery_speed = 0.1
 				
 				allow = {
 					always = yes
@@ -746,8 +735,8 @@ christian = {
 			}
 
 			icon_pancreator = {
-				build_time = -0.1
-				build_cost = -0.05
+				development_cost = -0.10
+				build_cost = -0.1
 				
 				allow = {
 					always = yes
@@ -763,8 +752,8 @@ christian = {
 			}
 	
 			icon_nicholas = {
-				diplomatic_annexation_cost = -0.25
-				diplomatic_upkeep = 2
+				improve_relation_modifier = 0.25
+				ae_impact = -0.1
 				
 				visible = {
 					always = yes
@@ -779,8 +768,8 @@ christian = {
 			}
 
 			icon_climacus = {
-				global_institution_spread = 0.33
-				embracement_cost = -0.25
+				global_institution_spread = 0.25
+				embracement_cost = -0.2
 
 				visible = {
 					always = yes
@@ -819,8 +808,7 @@ christian = {
 	}
 	
 	coptic = {
-		allow_female_defenders_of_the_faith = yes
-		declare_war_in_regency = yes
+	
 		flags_with_emblem_percentage = 20
 		flag_emblem_index_range = { 1 4 }
 
@@ -837,7 +825,6 @@ christian = {
 		province = {
 			local_missionary_strength = -0.02
 		}
-
 		allowed_center_conversion = {
 			orthodox
 			sunni
@@ -858,6 +845,141 @@ christian = {
 			promote_territorial_rights
 			will_of_the_martyrs
 		}
+	}
+	
+	anabaptist = {
+		color = { 244 150 150 }
+		icon = 30
+		allowed_conversion = {
+			reformed
+			protestant
+			catholic
+		}
+		
+		allowed_center_conversion = {
+			catholic
+		}
+		country = {
+			global_heretic_missionary_strength = 0.02
+			colonists = 1
+			envoy_travel_time = -0.2 
+		}
+		
+		country_as_secondary = {
+			colonists = 1 
+		}
+		
+		uses_anglican_power = yes				# Uses church power/aspect mechanics
+		
+		aspects = {
+			anabaptist_diplomacy_aspect
+			american_expedition_aspect
+			rebaptize_ruler_aspect
+			promote_adult_baptism_aspect
+			anabaptist_dissolve_monasteries_aspect
+			icons_of_anabaptism_aspect
+		}
+		aspects_name = PROTESTANT_ASPECTS
+		
+		
+		#hre_heretic_religion = yes
+		
+		will_get_center = { #Refered to even for initial CoR Spawn
+			#any_owned_province = {
+			#	can_have_center_of_reformation_trigger = {
+			#		RELIGION = anabaptist
+			#	}
+			#}
+			always = yes
+		}
+		on_convert = {
+			change_religion = anabaptist
+			add_prestige = -100
+			remove_country_modifier = counter_reformation
+			remove_country_modifier = the_statue_in_restraint_of_appeals
+			remove_country_modifier = revocation_of_restraint_of_appeals
+			remove_country_modifier = bavarian_jesuits
+			remove_country_modifier = the_societas_jesu
+			remove_country_modifier = the_declaration_of_indulgence
+			remove_country_modifier = de_heretico_comburendo
+			remove_country_modifier = the_conventicle_act
+	
+			if = {
+				limit = {
+					has_country_flag = reformation_money
+					NOT = {
+						calc_true_if = {
+							all_province = {
+								religion = anabaptist
+								is_reformation_center = yes
+							}
+							amount = 3
+						}
+					}
+				}
+				hidden_effect = {
+					random_owned_province = {
+						limit = {
+							can_have_center_of_reformation_trigger = {
+								RELIGION = anabaptist
+							}
+						}
+						change_religion = anabaptist
+						add_reform_center = anabaptist
+					}
+				}
+				custom_tooltip = CENTER_OF_REFORMATION_POSSIBLE
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = reformation_money }
+					NOT = {
+						calc_true_if = {
+							all_province = {
+								religion = anabaptist
+								is_reformation_center = yes
+							}
+							amount = 3
+						}
+					}
+				}
+				add_years_of_income = 1.0
+				hidden_effect = {
+					random_owned_province = {
+						limit = {
+							can_have_center_of_reformation_trigger = {
+								RELIGION = anabaptist
+							}
+						}
+						change_religion = anabaptist
+						add_reform_center = anabaptist
+					}
+				}
+				custom_tooltip = CENTER_OF_REFORMATION_POSSIBLE
+			}
+			
+			add_country_modifier = {
+				name = "conversion_zeal"
+				duration = 3650
+			}			
+			set_country_flag = reformation_money
+			every_known_country = {
+				limit = {
+					reverse_has_opinion_modifier = {
+						who = ROOT
+						modifier = opinion_demote_pope
+					}
+				}
+				reverse_remove_opinion = {
+					who = ROOT
+					modifier = opinion_demote_pope
+				}
+			}
+		}
+		
+		heretic = { ANAHERETIC1 ANAHERETIC2 ANAHERETIC3 }
+		
+		date = 1527.1.1
 	}
 	
 	harmonized_modifier = harmonized_christian
@@ -1389,8 +1511,6 @@ muslim = {
 	}
 	
 	sunni = {
-		allow_female_defenders_of_the_faith = yes
-		declare_war_in_regency = yes
 		color = { 0 153 0 }
 		icon = 5
 		allowed_center_conversion = {
@@ -1415,10 +1535,8 @@ muslim = {
 	}
 
 	shiite = {
-		allow_female_defenders_of_the_faith = yes
-		declare_war_in_regency = yes
 		color = { 0 204 0 }
-		icon = 6
+		icon = 6	
 		allowed_center_conversion = {
 			sunni
 			ibadi
@@ -1442,7 +1560,7 @@ muslim = {
 	
 	ibadi = {
 		color = { 0 102 0 }
-		icon = 16
+		icon = 16	
 		allowed_center_conversion = {
 			sunni
 			shiite
@@ -1470,13 +1588,11 @@ muslim = {
 }
 
 eastern = {
-	defender_of_faith = yes
+
 	flags_with_emblem_percentage = 33
 	flag_emblem_index_range = { 58 80 }
 
 	buddhism = { #Theravada
-	allow_female_defenders_of_the_faith = yes
-	declare_war_in_regency = yes
 		color = { 204 76 0 }
 		icon = 24
 		allowed_conversion = {
@@ -1508,8 +1624,6 @@ eastern = {
 	}
 	
 	vajrayana = {
-		allow_female_defenders_of_the_faith = yes
-		declare_war_in_regency = yes
 		color = { 204 76 76 }
 		icon = 25
 		allowed_conversion = {
@@ -1541,8 +1655,6 @@ eastern = {
 	}
 	
 	mahayana = {
-		allow_female_defenders_of_the_faith = yes
-		declare_war_in_regency = yes
 		color = { 204 76 127 }
 		icon = 23
 		allowed_conversion = {
@@ -1574,8 +1686,6 @@ eastern = {
 	}
 
 	confucianism = {
-		allow_female_defenders_of_the_faith = yes
-		declare_war_in_regency = yes
 		color = { 214 229 140 }
 		icon = 9
 		country = {
@@ -1591,8 +1701,6 @@ eastern = {
 	}
 
 	shinto = {
-		allow_female_defenders_of_the_faith = yes
-		declare_war_in_regency = yes
 		color = { 204 0 0 }
 		icon = 10
 		country = {
@@ -1618,13 +1726,11 @@ eastern = {
 }
 
 dharmic = {
-	defender_of_faith = yes
+
 	flags_with_emblem_percentage = 33
 	flag_emblem_index_range = { 61 82 } #Many shared with Eastern
 
 	hinduism = {
-		allow_female_defenders_of_the_faith = yes
-		declare_war_in_regency = yes
 		color = { 0 204 204 }
 		icon = 8
 		allowed_conversion = {
@@ -1656,8 +1762,6 @@ dharmic = {
 	}
 
 	sikhism = {
-		allow_female_defenders_of_the_faith = yes
-		declare_war_in_regency = yes
 		color = { 0 153 153 }
 		icon = 15
 		allowed_conversion = {
@@ -2275,13 +2379,11 @@ dharmic = {
 }
 
 pagan = {
-	defender_of_faith = yes
+
 	flags_with_emblem_percentage = 10
 	flag_emblem_index_range = { 83 96 }
 
 	animism = {
-		allow_female_defenders_of_the_faith = yes
-		declare_war_in_regency = yes
 		color = { 127 0 0 }
 		icon = 11
 		country = {
@@ -2299,8 +2401,6 @@ pagan = {
 		heretic = { SNAKE_CLAN }
 	}
 	shamanism = { #Fetishism, tag kept to avoid breaking saves.
-	allow_female_defenders_of_the_faith = yes
-	declare_war_in_regency = yes
 		color = { 127 76 76 }
 		icon = 12
 		country = {
@@ -2316,8 +2416,6 @@ pagan = {
 		heretic = { GOAT_SKULL }
 	}
 	totemism = {
-		allow_female_defenders_of_the_faith = yes
-		declare_war_in_regency = yes
 		color = { 127 115 115 }
 		icon = 13
 		country = {
@@ -2338,8 +2436,6 @@ pagan = {
 	}
 	
 	inti = {
-		allow_female_defenders_of_the_faith = yes
-		declare_war_in_regency = yes
 		color = { 64 115 115 }
 		icon = 18
 		country = {
@@ -2364,8 +2460,6 @@ pagan = {
 	}
 	
 	nahuatl = {
-		allow_female_defenders_of_the_faith = yes
-		declare_war_in_regency = yes
 		color = { 64 115 64 }
 		icon = 17
 		country = {
@@ -2390,8 +2484,6 @@ pagan = {
 	}
 	
 	mesoamerican_religion = {
-		allow_female_defenders_of_the_faith = yes
-		declare_war_in_regency = yes
 		#color = { 76 25 178 }
 		color = { 127 25 178 }
 		icon = 19
@@ -2414,8 +2506,6 @@ pagan = {
 	}
 	
 	norse_pagan_reformed = {
-		allow_female_defenders_of_the_faith = yes
-		declare_war_in_regency = yes
 		icon = 21
 		color = { 191 191 191 }
 		country = {
@@ -2436,8 +2526,6 @@ pagan = {
 	}
 	
 	tengri_pagan_reformed = {
-		allow_female_defenders_of_the_faith = yes
-		declare_war_in_regency = yes
 		icon = 27
 		color = { 25 76 217 }
 		country = {
@@ -2449,8 +2537,6 @@ pagan = {
 	}
 	
 	dreamtime = {
-		allow_female_defenders_of_the_faith = yes
-		declare_war_in_regency = yes
 		icon = 29
 		color = { 197 133 43 }
 		country = {
@@ -2471,13 +2557,11 @@ pagan = {
 }
 
 jewish_group = {
-	defender_of_faith = yes
 	flags_with_emblem_percentage = 33
 	flag_emblem_index_range = { 106 107 }
+	defender_of_faith = yes
 
 	jewish = {
-		allow_female_defenders_of_the_faith = yes
-		declare_war_in_regency = yes
 		icon = 20
 		color = { 0 156 231 }
 		country = {
@@ -2604,11 +2688,9 @@ jewish_group = {
 
 
 zoroastrian_group = {
-	defender_of_faith = yes
 	flag_emblem_index_range = { 110 110 }
+	defender_of_faith = yes
 	zoroastrian = {
-		allow_female_defenders_of_the_faith = yes
-		declare_war_in_regency = yes
 		icon = 26
 		color = { 127 178 51 }
 		province = {
@@ -2622,7 +2704,6 @@ zoroastrian_group = {
 			merchants = 1
 			tolerance_own = 1
 		}
-
 		allowed_center_conversion = {
 			sunni
 			shiite

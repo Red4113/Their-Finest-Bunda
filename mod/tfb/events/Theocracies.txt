@@ -221,10 +221,152 @@ country_event = {
 			
 		}
 	}
-
+option = {
+		name = theocracy.1.bur		# A Noble of House de Bourgogne
+		trigger = {
+			has_country_flag = bur_influenced_election
+		}
+		ai_chance = { 
+			factor = 100
+			modifier = {
+				factor = 0
+				NOT = {
+					has_opinion = {
+						who = BUR
+						value = 50
+					}
+				}
+			}
+		}
+		if = {
+			limit = { has_government_attribute = can_see_theocratic_heir_stats }
+			if = {
+				limit = {
+					has_global_modifier_value = {
+						which = female_advisor_chance
+						value = 1
+					}
+				}
+				define_heir = {
+					age = 35
+					female = yes
+					dynasty = "de Bourgogne"
+					culture = burgundian
+					religion = ROOT
+				}
+			}
+			else = {
+				define_heir = {
+					age = 35
+					dynasty = "de Bourgogne"
+					culture = burgundian
+					religion = ROOT
+				}
+			}
+		}
+		else = {
+			if = {
+				limit = {
+					has_global_modifier_value = {
+						which = female_advisor_chance
+						value = 1
+					}
+				}
+				define_heir = {
+					age = 35
+					female = yes
+					hidden = yes
+					dynasty = "de Bourgogne"
+					culture = burgundian
+					religion = ROOT
+				}
+			}
+			else = {
+				define_heir = {
+					age = 35
+					hidden = yes
+					dynasty = "de Bourgogne"
+					culture = burgundian
+					religion = ROOT
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_government_attribute = theocratic_monarchy_mechanic
+			}
+			custom_tooltip = monarchistic_direction_tt
+			set_heir_flag = monarchistic_heir
+			change_statists_vs_orangists = 0.15
+		}
+		BUR = { country_event = {
+			id = dutch_domination.16
+		}
+		}
+	}
+	option = {
+		name = theocracy.1.utr		# Ruler of Utrecht
+		trigger = {
+			has_country_flag = dom_utr_influenced_election
+		}
+		ai_chance = { 
+			factor = 100
+			modifier = {
+				factor = 0
+				NOT = {
+					has_opinion = {
+						who = UTR
+						value = 50
+					}
+				}
+			}
+		}
+		hidden_effect = {
+		UTR = {
+			save_event_target_as = utrecht_event_target
+		}
+		}
+		#	set_saved_name = {
+		#		key = utrecht_ruler
+		#		type = simple
+		#		name = "Ruler of Utrecht"
+		#	}
+		#}
+		if = {
+			limit = { has_government_attribute = can_see_theocratic_heir_stats }
+			define_heir = {
+				dynasty = event_target:utrecht_event_target
+				culture = event_target:utrecht_event_target
+				religion = event_target:utrecht_event_target
+				claim = 100
+			}
+		}
+		else = {
+			define_heir = {
+				name = UTR
+				dynasty = event_target:utrecht_event_target
+				culture = event_target:utrecht_event_target
+				religion = event_target:utrecht_event_target
+				hidden = yes
+				claim = 100
+			}
+		}
+		if = {
+			limit = {
+				has_government_attribute = theocratic_monarchy_mechanic
+			}
+			custom_tooltip = monarchistic_direction_tt
+			set_heir_flag = monarchistic_heir
+			change_statists_vs_orangists = 0.15
+		}
+		UTR = { country_event = {
+			id = dutch_domination.161
+		}
+		}
+	}
 	option = {
 		name = theocracy.1.a		# A Local Noble
-		trigger = { NOT = { has_country_flag = KOL_secondogeniture_of_BAV } }
+		trigger = { NOT = { OR = { has_country_flag = KOL_secondogeniture_of_BAV has_country_flag = bur_influenced_election has_country_flag = dom_utr_influenced_election } } }
 		if = {
 			limit = {
 				has_estate = estate_nobles
@@ -674,7 +816,7 @@ country_event = {
 	}
 	option = {
 		name = theocracy.1.e		# A Talented Theologian
-		trigger = { NOT = { has_country_flag = KOL_secondogeniture_of_BAV } }
+		trigger = { NOT = { OR = { has_country_flag = KOL_secondogeniture_of_BAV has_country_flag = dom_utr_influenced_election } } }
 		if = {
 			limit = {
 				has_estate = estate_church
@@ -947,7 +1089,7 @@ country_event = {
 				}
 				define_heir = {
 					age = 35
-					#hidden = yes
+					hidden = yes
 					culture = event_target:church_province
 				}
 			}
@@ -961,7 +1103,7 @@ country_event = {
 				}
 				define_heir = {
 					age = 35
-					#hidden = yes
+					hidden = yes
 					female = yes
 					culture = event_target:church_province
 				}
@@ -976,13 +1118,13 @@ country_event = {
 				define_heir = {
 					age = 35
 					female = yes
-					#hidden = yes
+					hidden = yes
 				}
 			}
 			else = {
 				define_heir = {
 					age = 35
-					#hidden = yes
+					hidden = yes
 				}
 			}
 		}
@@ -1002,7 +1144,7 @@ country_event = {
 	option = {
 		name = theocracy.1.d		# A Papal Protege
 		trigger = {
-			NOT = { has_country_flag = KOL_secondogeniture_of_BAV }
+			NOT = { OR = { has_country_flag = KOL_secondogeniture_of_BAV has_country_flag = bur_influenced_election has_country_flag = dom_utr_influenced_election } }
 			religion = catholic
 		}
 		if = {
@@ -1112,7 +1254,7 @@ country_event = {
 					age = 35
 					culture = event_target:papal_protoge_country
 					female = yes
-				#	hidden = yes
+					hidden = yes
 				}
 			}
 			else_if = {
@@ -1125,13 +1267,13 @@ country_event = {
 				define_heir = {
 					age = 35
 					female = yes
-					#hidden = yes
+					hidden = yes
 				}
 			}
 			else = {
 				define_heir = {
 					age = 35
-				#	hidden = yes
+					hidden = yes
 				}
 			}
 		}

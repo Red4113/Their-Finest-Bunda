@@ -15,7 +15,6 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		always = no
 		tag = BUR
 		has_country_modifier = burgundian_succession_crisis
 		NOT = { has_country_flag = burgundian_succession_start }
@@ -103,12 +102,14 @@ country_event = {
 	
 	major = yes
 	
-	trigger = {
-		always = no
-	}
-
 	is_triggered_only = yes
 	fire_only_once = yes
+	
+	trigger = {
+		NOT = {
+			has_country_flag = Prevent_Burgundian_Intheritance_Flag
+		}
+	}
 	
 	immediate = {
 		hidden_effect = {
@@ -121,6 +122,7 @@ country_event = {
 			random_country = { #largest Nation with a marriage with Burgundy
 				limit = {
 					is_emperor = no
+					NOT = { tag = FRA } #either emperor and france need to be excluded or none -Petrus Fix
 					marriage_with = ROOT
 					government = monarchy
 					is_free_or_tributary_trigger = yes
@@ -135,6 +137,22 @@ country_event = {
 					}
 				}
 				save_event_target_as = bur_strongest_ally
+			}
+			if = {
+				limit = {
+					GEL = {
+						is_subject_of = ROOT
+					}
+				}
+				GEL = { grant_independence = yes }
+			}
+			if = {
+				limit = {
+					LIE = {
+						is_subject_of = ROOT
+					}
+				}
+				LIE = { grant_independence = yes }
 			}
 		}
 	}
@@ -276,6 +294,13 @@ country_event = {
 					}
 				}
 			}
+			modifier = { #strengthening the stand-alone chance when the "strongest ally" isn't strong -Pete Fix
+				factor = 1.5
+				army_strength = {
+						who = event_target:bur_strongest_ally
+						value = 2
+				}
+			}
 			modifier = {
 				factor = 1.3
 				is_rival = emperor
@@ -333,6 +358,15 @@ country_event = {
 				factor = 2
 				marriage_with = emperor
 			}
+			modifier = { #strengthening the emperors chance when the "strongest ally" isn't strong -Pete Fix
+				factor = 2
+				emperor = {
+					army_strength = {
+						who = event_target:bur_strongest_ally
+						value = 4
+					}
+				}
+			}
 			modifier = {
 				factor = 2
 				alliance_with = emperor
@@ -342,7 +376,7 @@ country_event = {
 				is_part_of_hre = yes
 			}
 			modifier = {
-				factor = 0.5
+				factor = 0.25
 				OR = {
 					is_rival = emperor
 					emperor = { is_rival = ROOT }
@@ -358,8 +392,14 @@ country_event = {
 				}
 				FRA = { exists = yes }
 			}
-			FRA = { vassalize = NEV }
+			FRA = { 
+				create_subject = {
+					subject_type = appanage
+					subject = NEV
+				} 
+			}
 		}
+		#CHANGE LATER - TODO
 		every_subject_country = {
 			limit = {
 				ai = yes
@@ -376,6 +416,7 @@ country_event = {
 			}
 			BUR = { inherit = PREV }
 		}
+		#
 		hidden_effect = {
 			if = {
 				limit = {
@@ -454,6 +495,13 @@ country_event = {
 					FRA = { is_rival = ROOT }
 				}
 			}
+			modifier = { #lowering the chance when the "strongest ally" isn't strong -Pete Fix
+				factor = 0.2
+				army_strength = {
+					who = event_target:bur_strongest_ally
+					value = 2
+				}
+			}
 		}
 		custom_tooltip = marry_strong_ally_tt
 		#Absorb subjects
@@ -464,8 +512,14 @@ country_event = {
 				}
 				FRA = { exists = yes }
 			}
-			FRA = { vassalize = NEV }
+			FRA = { 
+				create_subject = {
+					subject_type = appanage
+					subject = NEV
+				} 
+			}
 		}
+		#CHANGE LATER - TODO
 		every_subject_country = {
 			limit = {
 				ai = yes
@@ -482,6 +536,7 @@ country_event = {
 			}
 			BUR = { inherit = PREV }
 		}
+		#
 		event_target:bur_strongest_ally = {
 			create_union = ROOT
 		}
@@ -570,6 +625,7 @@ country_event = {
 		}
 		custom_tooltip = marry_french_tt
 		#Absorb subjects
+		#CHANGE LATER - TODO
 		every_subject_country = {
 			limit = {
 				ai = yes
@@ -586,6 +642,7 @@ country_event = {
 			}
 			BUR = { inherit = PREV }
 		}
+		#
 		FRA = {
 			create_union = ROOT
 			hidden_effect = {
