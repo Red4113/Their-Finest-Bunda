@@ -7069,7 +7069,7 @@ JNP_ideas = {
 		development_cost = -0.1
 	}
 	jnp_gangetic_plain = {
-		global_trade_goods_size_modifier = 0.1f
+		global_trade_goods_size_modifier = 0.1
 	}
 	jnp_hindusthani_classical_music = {
 		prestige = 1
