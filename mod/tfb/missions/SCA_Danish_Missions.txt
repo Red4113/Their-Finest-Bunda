@@ -1069,6 +1069,41 @@ dan_norway_holstein_mission_slot = {
 							months = 300
 							target = NOR
 						}
+						eastern_norway = {
+							limit = {
+								NOT = { is_permanent_claim = ROOT }
+								NOT = { is_core = ROOT	}
+							}
+							add_permanent_claim = ROOT
+						}
+						western_norway = {
+							limit = {
+								NOT = { is_permanent_claim = ROOT }
+								NOT = { is_core = ROOT	}
+							}
+							add_permanent_claim = ROOT
+						}
+						subarctic_islands_area = {
+							limit = {
+								NOT = { is_permanent_claim = ROOT }
+								NOT = { is_core = ROOT	}
+							}
+							add_permanent_claim = ROOT
+						}
+						northern_norway = {
+							limit = {
+								NOT = { is_permanent_claim = ROOT }
+								NOT = { is_core = ROOT	}
+							}
+							add_permanent_claim = ROOT
+						}
+						315 = {
+							limit = {
+								NOT = { is_permanent_claim = ROOT }
+								NOT = { is_core = ROOT	}
+							}
+							add_permanent_claim = ROOT
+						}
 					}
 					else = {
 						eastern_norway = {
@@ -1715,6 +1750,41 @@ dan_sweden_and_great_power_mission_slot = {
 							type = cb_restore_personal_union
 							months = 300
 							target = SWE
+						}
+						vastra_gotaland_area = {
+							limit = {
+								NOT = { is_permanent_claim = ROOT }
+								NOT = { is_core = ROOT	}
+							}
+							add_permanent_claim = ROOT
+						}
+						gotaland_area = {
+							limit = {
+								NOT = { is_permanent_claim = ROOT }
+								NOT = { is_core = ROOT	}
+							}
+							add_permanent_claim = ROOT
+						}
+						svealand_area = {
+							limit = {
+								NOT = { is_permanent_claim = ROOT }
+								NOT = { is_core = ROOT	}
+							}
+							add_permanent_claim = ROOT
+						}
+						ostra_svealand_area = {
+							limit = {
+								NOT = { is_permanent_claim = ROOT }
+								NOT = { is_core = ROOT	}
+							}
+							add_permanent_claim = ROOT
+						}
+						norrland_area = {
+							limit = {
+								NOT = { is_permanent_claim = ROOT }
+								NOT = { is_core = ROOT	}
+							}
+							add_permanent_claim = ROOT
 						}
 					}
 					else = {
