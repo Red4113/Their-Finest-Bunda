@@ -1708,6 +1708,7 @@ dan_sweden_and_great_power_mission_slot = {
 							valid_for_personal_unions_trigger = yes
 							SWE = {
 								valid_for_personal_unions_trigger = yes
+								ai = yes
 							}
 						}
 						add_casus_belli = {
