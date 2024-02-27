@@ -155,6 +155,9 @@ on_colonial_liberation = {
 		}
 		country_event = { id = colonial_nation.90 days = 1 }
 	}
+	ROOT = {
+		restore_country_color = yes
+	}
 }
 
 # country
@@ -1969,6 +1972,19 @@ on_siberian_pulse = {
 
 # country random events
 on_monthly_pulse = {
+	ROOT = {
+		every_subject_country = {
+			limit = {
+				is_colonial_nation = yes
+				NOT = {
+					is_subject_of_type = tributary_state
+				}
+			}
+			change_country_color = {
+				country = ROOT
+			}
+		}
+	}
 }
 on_yearly_pulse = {
 	events = {
