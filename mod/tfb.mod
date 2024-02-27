@@ -9,4 +9,5 @@ tags={
 }
 name="Their Finest Bunda"
 supported_version="1.36.2"
+picture="thumbnail.png"
 path="mod/tfb"
