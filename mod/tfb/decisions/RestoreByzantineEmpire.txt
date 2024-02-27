@@ -44,7 +44,10 @@ country_decisions = {
 		allow = {
 			NOT = { exists = BYZ }
 			NOT = { exists = GRE }
-			primary_culture = greek
+			OR = {
+				primary_culture = greek
+				tag = HUN
+			}
 			religion = orthodox
 			owns = 149	# Edirne
 			owns = 144  # Epiros
