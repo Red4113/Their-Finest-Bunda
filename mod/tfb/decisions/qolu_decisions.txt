@@ -28,6 +28,47 @@ country_decisions = {
 		}
 	}
 
+	hab_austrian_empire = {
+		color = { 239 51 64 }
+
+		potential = {
+			tag = HAB
+			NOT = {
+				has_country_flag = hab_austrian_empire_decision
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				region = south_german_region
+				province_id = 266 #Prague
+				province_id = 65 #Munich
+			}
+			OR = {
+				NOT = { development = 20 }
+				NOT = {	owned_by = ROOT }
+			}
+		}
+		allow = {
+			num_of_owned_provinces_with = {
+				value = 15
+				development = 20
+				region = south_german_region
+				is_core = root
+			}
+			adm_tech = 15
+			owns_core_province = 266 #Prague
+			owns_core_province = 65 #Munich
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "hab_austrian_empire_modifier"
+				duration = -1
+			}
+			set_country_flag = hab_austrian_empire_decision
+		}
+	}
+
 	qolu_wool_into_cloth_d = {
 		color = { 166  0  0 }
 		potential = {

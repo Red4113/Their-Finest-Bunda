@@ -15,6 +15,14 @@ por_exploration = {
 	global_colonial_growth = 15
 }
 
+hab_austrian_empire_modifier = {
+	land_morale = 0.10
+	infantry_power = 0.10
+	discipline = 0.025
+	imperial_authority = 0.05
+	development_cost_in_primary_culture = -0.1
+}
+
 echo_development = {
 	development_cost = -0.1
 }
