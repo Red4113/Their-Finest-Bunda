@@ -1346,8 +1346,7 @@ gc_por_3 = {
 			if = {
 				limit = { ai = no }
 				num_of_owned_provinces_with = {
-					value = 1 
-					region = iberia_region
+					value = 5 
 					holy_order = jesuit_order
 				}
 			}
