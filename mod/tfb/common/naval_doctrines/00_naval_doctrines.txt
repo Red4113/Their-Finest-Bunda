@@ -161,9 +161,7 @@ danish_admirality = {
 	country_modifier = {
 		leader_naval_manuever = 2
 		admiral_cost = -0.1
-		heavy_ship_power = 0.075
-		capture_ship_chance = 0.1
-		prestige_from_naval = 0.1
+		heavy_ship_power = 0.05
 		naval_tradition_from_trade = 0.05
 	}
 	effect = {}
