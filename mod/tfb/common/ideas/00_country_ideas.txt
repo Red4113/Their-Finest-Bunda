@@ -1523,13 +1523,13 @@ PRU_ideas = {
 		army_tradition_decay = -0.01
 	}
 	army_professionalism = {
-		land_morale = 0.15
+		land_morale = 0.2
 	}	
 	noble_cadets = {
 		nobles_loyalty_modifier = 0.10
 	}
 	goose_step = {
-		infantry_power = 0.1
+		infantry_power = 0.2
 	}
 	regimental_cantons = {
 		global_manpower_modifier = 0.25
@@ -1544,7 +1544,7 @@ PRU_ideas = {
 BRA_ideas = {
 	start = {
 		infantry_power = 0.1
-		build_cost = -0.1
+		build_cost = -0.15
 	}
 	
 	bonus = {

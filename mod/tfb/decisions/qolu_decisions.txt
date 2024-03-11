@@ -275,8 +275,15 @@ country_decisions = {
 		color = { 66 245 242 }
 
 		potential = {
-			tag = POR
+			OR = {
+				tag = POR
+				tag = BUR
+				tag = DAN
+			}
 			NOT = { has_country_modifier = por_exploration }
+			NOT = {
+				year = 1494
+			}
 		}
 
 		allow = {
