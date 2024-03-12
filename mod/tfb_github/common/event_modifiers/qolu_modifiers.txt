@@ -11,7 +11,7 @@ qolu_2colonists = {
 }
 
 por_exploration = {
-	range = 0.5
+	range = 0.75
 	global_colonial_growth = 15
 }
 

@@ -103,11 +103,11 @@ country_decisions = {
 			}
 			east_prussia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				owned_by = ROOT
 			}
 			west_prussia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				owned_by = ROOT
 			}			
 			is_at_war = no
 		}
@@ -257,7 +257,10 @@ country_decisions = {
 			}
 		}
 		provinces_to_highlight = {
-			province_id = 41	# Königsberg
+			OR = {
+				area = east_prussia_area
+				area = west_prussia_area
+			}
 			OR = {
 				NOT = { owned_by = ROOT }
 				NOT = { is_core = ROOT }
@@ -280,9 +283,13 @@ country_decisions = {
 					}
 				}
 			}
-			owns_core_province = 41 # Königsberg
-			41 = { 					# Königsberg
-				is_state = yes
+			east_prussia_area = {
+				type = all
+				owned_by = ROOT
+			}
+			west_prussia_area = {
+				type = all
+				owned_by = ROOT
 			}
 		}
 		effect = {
@@ -430,24 +437,8 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 			OR = {
-				province_id = 41	# Königsberg
-				AND = {
-					OR = {
-						area = west_prussia_area
-						area = east_prussia_area
-					}
-					ROOT = {
-						NOT = {
-							num_of_owned_provinces_with = {
-								value = 5
-								OR = {
-									area = west_prussia_area
-									area = east_prussia_area
-								}
-							}
-						}
-					}
-				}
+				area = east_prussia_area
+				area = west_prussia_area
 			}
 			OR = {
 				NOT = { owned_by = ROOT }
@@ -466,9 +457,14 @@ country_decisions = {
 				religion = hussite
 				religion = anglican
 			}
-			owns_core_province = 41			# Königsberg
-			owns_core_province = 42			# Warmia
-			owns_core_province = 43			# Danzig
+			east_prussia_area = {
+				type = all
+				owned_by = ROOT
+			}
+			west_prussia_area = {
+				type = all
+				owned_by = ROOT
+			}
 		}
 		effect = {
 			change_tag = PRU
