@@ -17,7 +17,7 @@ por_exploration = {
 
 hab_austrian_empire_modifier = {
 	land_morale = 0.10
-	infantry_power = 0.10
+	artillery_power = 0.05
 	discipline = 0.025
 	imperial_authority = 0.05
 	development_cost_in_primary_culture = -0.1
