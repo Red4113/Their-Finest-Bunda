@@ -2272,7 +2272,8 @@ prussian_monarchy = {
 		max_absolutism = 10
 		monarch_military_power = 3
 		nobles_loyalty_modifier = 0.1
-		governing_capacity_modifier = -0.25
+		governing_capacity_modifier = -0.35
+		max_general_fire = 1
 	}
 
 	conditional = {
