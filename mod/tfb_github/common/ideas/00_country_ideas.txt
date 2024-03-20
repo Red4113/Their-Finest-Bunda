@@ -15911,12 +15911,12 @@ LAE_ideas = {
 
 LOT_ideas = {
 	start = {
-		infantry_power = 0.1
-		global_manpower_modifier = 0.25
+		max_general_fire = 1
+		global_manpower_modifier = 0.33
 	}
 	
 	bonus = {
-		ae_impact = -0.1
+		artillery_power = 0.1
 	}
 	
 	trigger = {
@@ -15925,10 +15925,10 @@ LOT_ideas = {
 	free = yes		#will be added at load.
 	
 	lot_legacy_of_the_carolingians = {
-		prestige_decay = -0.01
+		discipline = 0.05
 	}
 	lot_glory_of_charlemagne = {
-		land_morale = 0.15
+		land_morale = 0.2
 	}
 	lot_dutch_cities = {
 		trade_efficiency = 0.1
