@@ -275,11 +275,7 @@ country_decisions = {
 		color = { 66 245 242 }
 
 		potential = {
-			OR = {
-				tag = POR
-				tag = BUR
-				tag = DAN
-			}
+			tag = POR
 			NOT = { has_country_modifier = por_exploration }
 			NOT = {
 				year = 1494
@@ -293,6 +289,33 @@ country_decisions = {
 		effect = {
 			add_country_modifier = {
 				name = por_exploration
+				duration = 18250
+			}
+			create_explorer = { tradition = 10 }
+		}
+	}
+
+	qolu_bur_day1colonist = {
+		color = { 66 245 242 }
+
+		potential = {
+			OR = {
+				tag = BUR
+				tag = DAN
+			}
+			NOT = { has_country_modifier = bur_exploration }
+			NOT = {
+				year = 1494
+			}
+		}
+
+		allow = {
+			always = yes
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = bur_exploration
 				duration = 18250
 			}
 			create_explorer = { tradition = 10 }
