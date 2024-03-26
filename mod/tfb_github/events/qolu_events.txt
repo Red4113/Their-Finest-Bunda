@@ -383,4 +383,74 @@ country_event = {
 	}
 }
 
+country_event = {
+	id = qoluiraqrevolt.1
+	title = "Iraq Revolts"
+	desc = ""
+	picture = ANGRY_MOB_eventPicture
+	
+	trigger = {
+		tag = QAR
+	}
+	
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}	
+
+	hidden = yes
+
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					is_city = yes
+					is_capital = no
+					is_core = IRQ
+					culture = al_iraqiya_arabic
+				}
+				spawn_rebels = {
+					type = nationalist_rebels
+					size = 1
+					friend = IRQ
+				}
+			}
+			random_owned_province = {
+				limit = {
+					is_city = yes
+					is_capital = no
+					is_core = IRQ
+					culture = al_iraqiya_arabic
+				}
+				spawn_rebels = {
+					type = nationalist_rebels
+					size = 1
+					friend = IRQ
+				}
+			}
+			random_owned_province = {
+				limit = {
+					is_city = yes
+					is_capital = no
+					is_core = IRQ
+					culture = al_iraqiya_arabic
+				}
+				spawn_rebels = {
+					type = nationalist_rebels
+					size = 1
+					friend = IRQ
+				}
+			}
+			every_owned_province = {
+				limit = {
+					culture = al_iraqiya_arabic
+				}
+				add_unrest = 15
+				add_local_autonomy = 50
+			}
+		}
+	}
+}
+
 

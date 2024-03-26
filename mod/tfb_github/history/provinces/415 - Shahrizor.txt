@@ -1,7 +1,7 @@
 #415 - Sharazor
 
-owner = IRQ
-controller = IRQ
+owner = QAR
+controller = QAR
 culture = kurdish
 religion = sunni
 capital = "Kirkuk"

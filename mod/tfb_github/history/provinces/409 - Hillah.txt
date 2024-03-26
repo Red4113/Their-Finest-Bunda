@@ -1,7 +1,7 @@
 #409 - Karbala
 
-owner = IRQ
-controller = IRQ
+owner = QAR
+controller = QAR
 culture = al_iraqiya_arabic
 religion = shiite
 capital = "Karbala"

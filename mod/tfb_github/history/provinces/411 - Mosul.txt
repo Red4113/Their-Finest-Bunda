@@ -1,7 +1,7 @@
 #411 - Mosul
 
-owner = IRQ
-controller = IRQ
+owner = QAR
+controller = QAR
 culture = kurdish
 religion = sunni
 capital = "Al Mawsil"

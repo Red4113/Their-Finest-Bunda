@@ -1,7 +1,7 @@
 #2314 - Rahba
 
-owner = IRQ
-controller = IRQ
+owner = QAR
+controller = QAR
 culture = al_iraqiya_arabic
 religion = sunni
 capital = "Deir ez-Zor"
