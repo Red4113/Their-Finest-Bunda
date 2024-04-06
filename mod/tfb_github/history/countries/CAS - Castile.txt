@@ -103,6 +103,13 @@ change_estate_land_share = {
 #	}
 #}
 
+1440.1.5 = {
+	if = { 
+		limit = { has_dlc = "Domination" }
+		set_estate_privilege = estate_nobles_factionalist_nobility
+	}
+}
+
 1447.8.17 = {
 	queen = {
 		country_of_origin = POR
