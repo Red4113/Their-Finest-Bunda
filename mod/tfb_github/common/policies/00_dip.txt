@@ -1270,7 +1270,7 @@ armed_neutrality_act = {
 	}
 	
 	trade_steering = 0.15
-	merchants = 1
+	discipline = 0.03
 
 	effect = {}
 	removed_effect = {}

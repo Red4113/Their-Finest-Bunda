@@ -258,8 +258,8 @@ edict_of_resistance = {
 	}
 
 
-	defensiveness = 0.2
-	global_unrest = -2
+	regiment_manpower_usage = -0.05
+	fire_damage_received = -0.05
 
 	effect = {}
 	removed_effect = {}
@@ -1511,8 +1511,8 @@ church_sponsored_guilds = {
 		full_idea_group = religious_ideas
 		full_idea_group = trade_ideas
 	}
-	
-	global_missionary_strength = 0.02
+	development_cost = -0.10
+
 	
 	effect = {}
 	removed_effect = {}
